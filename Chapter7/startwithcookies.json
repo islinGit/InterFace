@@ -1,0 +1,36 @@
+[
+  {
+    "description":"模拟一个带cookies值的get请求",
+    "request":{
+      "uri":"/get/with/cookies",
+      "method":"get",
+      "cookies":{
+        "login":"true"
+      }
+    },
+    "response":{
+      "json":"这是一个带有cookie值的get请求"
+    }
+  },
+  {
+    "description":"模拟一个带cookies的post请求",
+    "request":{
+      "uri":"/post/with/cookies",
+      "method":"post",
+      "cookies":{
+        "login":"true"
+      },
+      "json":{
+        "name":"linjinbo",
+        "age":"25"
+      }
+    },
+    "response":{
+        "status":200,
+        "json":{
+          "linjinbo":"success",
+          "status":"1"
+        }
+    }
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "description":"模拟一个post请求",
+    "request":{
+      "uri":"/postdemo",
+      "method":"post"
+    },
+    "response":{
+      "text":"这是我的第一个post请求"
+    }
+  },
+  {
+    "description":"模拟有参的post请求",
+    "request":{
+      "uri":"/postdata",
+      "forms":{
+        "name":"linjinbo",
+        "age":"25"
+      }
+    },
+    "response":{
+      "text":"我林金波带着参数来了"
+    }
+  }
+
+]

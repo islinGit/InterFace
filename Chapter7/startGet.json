@@ -1,0 +1,26 @@
+[
+  {
+    "description":"模拟一个没有参数的get请求",
+    "request":{
+      "uri":"/getdemo",
+      "method":"get"
+    },
+    "response":{
+      "text":"这是一个没有参数的get请求"
+    }
+  },
+  {
+    "description":"模拟一个有参的get请求",
+    "request":{
+      "uri":"/havedata",
+      "method":"get",
+      "queries":{
+        "name":"linjinbo",
+        "age":"25"
+      }
+    },
+    "response":{
+      "text":"我林金波又回来了！！！"
+    }
+  }
+]
