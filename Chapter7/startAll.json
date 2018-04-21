@@ -1,0 +1,24 @@
+[
+  {
+    "description":"保函所有条件的post请求",
+    "request":{
+      "uri":"/post/all",
+      "method":"post",
+      "json":{
+        "name":"zhangyao",
+        "sex": "woman",
+        "love": "true"
+      },
+      "cookies":{
+        "result":"false"
+      },
+      "headers":{
+        "content-type":"application/json"
+      }
+    },
+    "response":{
+      "status":"200",
+      "json":"现在我依旧想你，虽然我知道我们此生已经缘尽。呼···，就这样吧，活在当下，活在现实中。"
+    }
+  }
+]

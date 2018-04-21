@@ -6,7 +6,7 @@
       "method":"post"
     },
     "response":{
-      "text":"这是我的第一个post请求"
+      "json":"这是我的第一个post请求"
     }
   },
   {
@@ -19,7 +19,7 @@
       }
     },
     "response":{
-      "text":"我林金波带着参数来了"
+      "json":"我林金波带着参数来了"
     }
   }
 
