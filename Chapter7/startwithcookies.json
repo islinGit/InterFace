@@ -1,5 +1,20 @@
 [
   {
+    "description":"这是一个会返回cookies值的请求",
+    "request":{
+      "uri":"/getCookies",
+      "method":"get"
+    },
+    "response":{
+      "json":"恭喜你成功获取cookies值",
+      "cookies":{
+        "login":"true"
+      }
+    }
+  },
+
+
+  {
     "description":"模拟一个带cookies值的get请求",
     "request":{
       "uri":"/get/with/cookies",
