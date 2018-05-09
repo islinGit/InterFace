@@ -35,7 +35,7 @@ public class GetMyCookies {
         //HttpClient client=new DefaultHttpClient();
         DefaultHttpClient client=new DefaultHttpClient();
         HttpResponse response=client.execute(get);
-        result= EntityUtils.toString(response.getEntity());
+        result= EntityUtils.toString(response.getEntity(),"utf-8");
         System.out.println(result);
 
         //获取cookies的方法

@@ -13,7 +13,6 @@
     }
   },
 
-
   {
     "description":"模拟一个带cookies值的get请求",
     "request":{
@@ -27,6 +26,7 @@
       "json":"这是一个带有cookie值的get请求"
     }
   },
+
   {
     "description":"模拟一个带cookies的post请求",
     "request":{
