@@ -12,7 +12,7 @@ public class TestMethodsDemo {
      */
     @Test
     public void test1() {
-        Assert.assertEquals(1, 2);
+        Assert.assertEquals(2, 2);
     }
 
     @Test

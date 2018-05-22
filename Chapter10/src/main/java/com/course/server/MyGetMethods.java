@@ -3,6 +3,7 @@ package com.course.server;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
+import org.testng.annotations.Test;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Random;
 
 @RestController
 @Api(value = "/",description = "这是我全部的get请求")
@@ -68,8 +70,8 @@ public class MyGetMethods {
     public Map<String,Integer> getValue(@PathVariable Integer start,@PathVariable Integer end){
         Map<String,Integer> list=new HashMap();
         list.put("电脑",2000);
-        list.put("牙刷",10);
-        list.put("xbox",1000);
+        list.put("牙刷",start);
+        list.put("xbox",end);
         return list;
     }
 }

@@ -1,13 +1,12 @@
 package com.course.server;
 
+import bean.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @RestController
@@ -18,6 +17,7 @@ public class MyPostMethod {
 
     //创建一个cookies类，用来装载cookies值
     Cookie cookie;
+    public User user;
 
     @RequestMapping(value = "/post/login",method = RequestMethod.POST)
     //配置swagger
@@ -31,5 +31,29 @@ public class MyPostMethod {
             return "访问成功";
         }
         return "用户名密码不正确";
+    }
+
+    @RequestMapping(value = "/getMyList",method = RequestMethod.POST)
+    @ApiOperation(value = "这是一个带参数的post请求，并返回用户信息列表",httpMethod = "POST")
+    public String getMyList(HttpServletRequest request ,
+                          @RequestBody User  u){
+        //设置一个获取cookies值的方法
+        Cookie[] cookies=request.getCookies();
+        for (Cookie c: cookies){
+            //这里需要注意一些事项：1、== 和 equal
+            //==比的是对象的地址  equal比的是对象的值
+            if (c.getName().equals("login")
+                    && c.getValue().equals("true")
+                    && u.getUserName().equals("linjinbo")
+                    && u.getPassWord().equals("123456")
+                    ){
+                user=new User();
+                user.setName("林金波");
+                user.setSex("男");
+                user.setAge("25");
+                return user.toString();
+            }
+        }
+        return "请求的数据不正确";
     }
 }
